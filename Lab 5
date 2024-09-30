@@ -1,0 +1,46 @@
+>>> # Luis Vasquez
+>>> # Date: [Insert today's date]
+>>> # Lab 5 The Bottle Return Program
+>>> # This program calculates the total number of bottles collected in a week
+>>> # and computes the total payout at $0.10 per bottle.
+>>> 
+>>> def main():
+...     # Step 1: Declare variables
+...     total_bottles = 0
+...     total_payout = 0.0
+...     keep_going = 'y'
+...     
+...     # Step 2: Loop to run program again
+...     while keep_going == 'y':
+...         total_bottles = 0  # Reset total bottles for each week
+...         for day in range(1, 8):
+...             bottles = int(input(f"Enter number of bottles for day #{day}: "))
+...             total_bottles += bottles
+...         
+...         # Step 3: Code to set the value of total_payout
+...         total_payout = total_bottles * 0.10
+...         
+...         # Code to print the number of total bottles and total payout
+...         print(f"\nThe total number of bottles collected is {total_bottles}")
+...         print(f"The total paid out is $ {total_payout:.2f}")
+...         
+...         # Ask if user wants to input another week's data
+...         keep_going = input("\nDo you want to enter another week’s worth of data? (Enter y or n): ").lower()
+... 
+>>> # Call the main function to run the program
+>>> if __name__ == "__main__":
+...     main()
+... 
+Enter number of bottles for day #1: 346
+Enter number of bottles for day #2: 238
+Enter number of bottles for day #3: 638
+Enter number of bottles for day #4: 890
+Enter number of bottles for day #5: 1035
+Enter number of bottles for day #6: 899
+Enter number of bottles for day #7: 536
+
+The total number of bottles collected is 4582
+The total paid out is $ 458.20
+
+Do you want to enter another weeks worth of data? (Enter y or n): n
+
